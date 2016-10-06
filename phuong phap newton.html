@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="name" content="content" charset="utf8">
+	<title>Phương pháp lặp</title>
+</head>
+<body>
+
+	<input type="text" id="valueX">
+	<button type="button" name="button" onclick="myFunction()">tim nghiem</button>
+	<p id="result"></p>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	function myFunction(){
+		var x = parseFloat(document.getElementById('valueX').value);
+		var result = "";
+		for(i = 0; i < 100; i++){
+			result += "x" + i + "= " + x + "</br>";
+            fx = 1.8*Math.pow(x, 2) - Math.sin(10*x);
+            fxx = 3.6*x - 10*Math.cos(10*x);
+
+            x = x - fx/fxx;
+		}
+		document.getElementById('result').innerHTML = result;
+	}
+</script>
